@@ -1,31 +1,151 @@
-body{
-    background-color: hsl(30, 54%, 90%) ;
+@font-face {
+  font-family: "YoungSerif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("ttf");
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+
+  font-family: "Outfit";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+
+  h1 {
+    font-family: "YoungSerif-Regular";
+    font-weight: bold;
+  }
 }
-
 
 @media (max-width: 375px) {
-    .container {
-        max-width: 375px;
+  .container {
+    max-width: 375px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.simple-recipe {
+  h1 {
+    color: black;
+  }
+  color: hsl(30, 18%, 87%);
+}
+
+.preparation {
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 10px;
+  padding: 10px;
+
+  h3{
+    color: hsl(332, 51%, 32%);
+  }
+  li {
+    padding-left: 1rem;
+    margin: 10px 0;
+  }
+  li::marker {
+    color: hsl(14, 45%, 36%);
+  }
+
+  span {
+    position: relative;
+    font-weight: bold;
+  }
+}
+
+.ingredients {
+  h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "YoungSerif";
+  }
+
+  li {
+    padding-left: 1rem;
+    margin: 10px 0;
+  }
+  li::marker {
+    color: hsl(14, 45%, 36%);
+  }
+}
+
+.separator {
+  border-top: 0.5px solid #ceccccb2;
+}
+
+.instructions {
+  h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "YoungSerif";
+  }
+
+  li {
+    list-style-type: decimal;
+    padding-left: 1rem;
+    margin: 10px 0;
+    color: hsl(30, 10%, 34%);
+  }
+  li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+  }
+
+  span {
+    position: relative;
+    font-weight: bold;
+    color: hsl(24, 5%, 18%);
+  }
+}
+
+.nutrition {
+  h2 {
+    color: hsl(14, 44%, 42%);
+    font-family: "YoungSerif";
+  }
+
+  .nutrition__table {
+    display: flex;
+    table {
+      width: 100%;
+      margin-left: 2rem;
     }
-}
+    td {
+      padding: 5px;
+    }
+    tr:nth-child(n + 2) td {
+      border-top: 0.5px solid #ceccccb2;
+    }
 
-img{
-    max-width: 70%;
-    height: auto;
-}
+    span {
+      font-weight: bold;
+      color: hsl(14, 45%, 36%);
+      margin-left: 10rem;
+      display: flex;
+    }
 
-.simple-recipe{
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
+    .nutrients {
+      display: flex;
+    }
+  }
 }

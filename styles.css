@@ -7,17 +7,18 @@
   src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("ttf");
 }
 
+
 body {
   background-color: hsl(30, 54%, 90%);
 
   font-family: "Outfit";
   font-weight: normal;
   font-style: normal;
+  margin: 0;
 }
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
 
   background-color: white;
   display: flex;
@@ -36,9 +37,13 @@ body {
 
 @media (max-width: 375px) {
   .container {
-    max-width: 375px;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
   }
 }
+
+
 
 img {
   max-width: 100%;
@@ -50,7 +55,6 @@ img {
   h1 {
     color: black;
   }
-  color: hsl(30, 18%, 87%);
 }
 
 .preparation {
